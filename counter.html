@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Widget</title>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <style>
+    .counter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 200px;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    .counter button {
+      padding: 5px 10px;
+      background-color: #4a4a4a;
+      color: #fff;
+      border: none;
+      border-radius:5px;
+      cursor: pointer;
+    }
+
+    .counter span {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .heading {
+      font-size: 24px;
+      font-weight: bold;
+      align-items: center;
+      width: 200px;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    .Body{
+        background-color: #FEF9EF;
+    }
+  </style>
+   
+</head>
+<body class="Body">
+  <div class="heading">
+    <h1>Counter Widget</h1>
+  </div>
+
+  <div x-data="{ count: 0 }" x-init="count = 0">
+    <div class="counter">
+      <button x-on:click="count = count - 1">-</button>
+      <span x-text="count"></span>
+      <button x-on:click="count = count + 1">+</button>
+    </div>
+  </div>
+</body>
+</html>
